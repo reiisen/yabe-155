@@ -1,0 +1,41 @@
+* {
+    font-family: "Quicksand";
+}
+
+th {
+    background-color: pink;
+
+}
+
+th,td {
+    border: solid 1px;
+    width: 100vw;
+    padding: 10px;
+}
+
+td:hover {
+    background-color: palevioletred;
+    transition: all 0.3s ;
+}
+
+td:active {
+    background-color: rgb(255, 142, 185);
+    transition: all 0.05s;
+}
+
+input.checkbox {
+    width: 16px;
+}
+
+table {
+    border: none;
+}
+
+h1 {
+    text-align: center;
+}
+ td input[type="checkbox"] {
+     width: 30px;
+     height: 30px;
+
+ }
