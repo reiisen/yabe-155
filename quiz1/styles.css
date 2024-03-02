@@ -16,14 +16,30 @@ body {
     display: flex;
     flex-direction: column;
 
-    font-family: 'Quicksand';
+    font-family: 'IBM Plex Mono';
     font-size: 14pt;
     font-weight: 500;
     color: white;
 
     position: relative;
 
-    z-index: 1;
+    z-index: 99;
+    overflow: hidden;
+    transition: filter 2s;
+    filter: blur(10px);
+    animation: zoomOut 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.00) forwards;
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(4);
+        filter: blur(10px);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: blur(0);
+    }
 }
 
 body :not(.banner-container) {
@@ -36,12 +52,11 @@ header {
     height: 100vh;
 }
 
-header video {
+header .banner {
     position: absolute;
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    object-position: 50% 50%;
 
     filter: brightness(40%);
 
@@ -53,7 +68,7 @@ header .gradient-block-fade {
     height: 100vh;
     position: absolute;
 
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(30, 30, 30, 1));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
 
     z-index: 2;
 }
@@ -82,7 +97,8 @@ header .navbar-container .content-navigator ul {
     flex-direction: row;
     justify-content: space-evenly;
     list-style-type: none;
-    gap: 2rem;
+    gap: 15rem;
+    padding-left: 0;
 }
 
 header .navbar-container .content-navigator ul li a {
@@ -99,7 +115,7 @@ header .navbar-container .content-navigator ul li a:hover {
 
 header .header-panel {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -107,25 +123,70 @@ header .header-panel {
     padding-bottom: 10vh;
 }
 
-header .header-panel .header-content {
+header .header-panel .header-content-box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    height: 35%;
+}
+
+header .header-panel .header-content-box .header-box-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+header .header-panel .header-content-box #bg {
+    object-fit: cover;
+    filter: blur(10px) brightness(40%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .header-panel .header-content-box #bg-addon {
+    object-fit: cover;
+    border-color: white;
+    border-style: dashed;
+    border-width: 2px;
+    backdrop-filter: blur(10px);
+
+    z-index: 10;
+}
+
+header .header-panel .header-content-box #fuxuan {
+    position: absolute;
+    height: auto;
+    max-width: 60%;
+    z-index: 11;
+    bottom: 0;
+    left: 0;
+    transform: translateY(25%) translateX(5%);
+}
+
+header .header-panel .header-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    transform: translateX(80%);
+    z-index: 999;
 }
 
-header .header-panel .header-content .title {
+header .header-panel .header-text .title {
     font-size: 250%;
     font-weight: 700;
 }
 
-header .header-panel .header-content .osutext {
-    color: pink;
-    text-shadow: 0px 0px 10px rgba(235, 130, 183, 0.7);
+header .header-panel .header-text .osutext {
+    color: rgb(243, 192, 255);
+    text-shadow: 0px 0px 10px rgba(243, 192, 255, 0.7);
 }
 
-header .header-panel .header-content .button-container {
+header .header-panel .header-text .button-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -135,26 +196,25 @@ header .header-panel .header-content .button-container {
     margin-top: 0.8rem;
 }
 
-header .header-panel .header-content .button-container a {
+header .header-panel .header-text .button-container a {
     text-decoration: none;
     color: white;
 }
 
-header .header-panel .header-content .button-container .header-button {
+header .header-panel .header-text .button-container .header-button {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
 
-    background-color: rgba(30, 30, 30, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 1rem 2rem;
 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
-    backdrop-filter: blur(10px);
 }
 
-header .header-panel .header-content .button-container .header-button i {
-    color: pink;
+header .header-panel .header-text .button-container .header-button i {
+    color: rgb(243, 192, 255);
 }
