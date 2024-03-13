@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript Platform</title>
+</head>
+<body>
+    <h1>Tipe Data Pada Javascript</h1>
+    <!-- id hasil -->
+    <div id="hasilangka"></div>
+    <div id="hasilkalimat"></div>
+    <div id="hasilhewan"></div>
+    <div id="hasilmanusia"></div>
+
+    <script>
+        // tipe data number
+        var angka = 60;
+        //tipe data string
+        var kalimat = "ayo belajar Javascript";
+        //tipe data Array
+        var hewan = ["kambing", "bebek", "ayam"];
+        // tipe data objek
+        var manusia = {
+            nama : "Budi",
+            alamat: "Yogyakarta",
+            umur : 20,
+            pekerjaan : "Mahasiswa"
+        };
+
+        document.getElementById("hasilangka").innerHTML = angka;
+        document.getElementById("hasilkalimat").innerHTML = kalimat;
+        document.getElementById("hasilhewan").innerHTML = hewan;
+        document.getElementById("hasilmanusia").innerHTML = manusia.nama + " tinggal di " + manusia.alamat + 
+        ". Dia sekarang berumur " + manusia.umur + " dan bekerja sebagai " + manusia.pekerjaan;
+        
+    </script>
+</body>
+</html>

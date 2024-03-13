@@ -1,1 +1,1 @@
-document.getElementById("nama").innerHTML = "Mata Kuliah Pemograman Platform";
+document.getElementById("nama").innerHTML = "Mata Kuliah Pemrograman Platform Eksternal"

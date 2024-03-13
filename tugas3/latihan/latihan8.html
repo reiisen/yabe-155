@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belajar Javascript Platform</title>
-</head> 
+</head>
 <body>
     <h1>Belajar Javascript</h1>
-    <div id="nama"></div>
-    <script type="text/javascript" src="belajar.js"></script>
-    
+
+    <!-- id hasil -->
+    <div id="hasil"></div>
+
+    <script>
+        var tanggal = new Date();
+        
+        document.getElementById("hasil").innerHTML = tanggal;
+    </script>
 </body>
 </html>

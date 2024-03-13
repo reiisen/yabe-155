@@ -7,13 +7,15 @@
 </head>
 <body>
     <h1>Belajar Javascript</h1>
-    <div id="nama"></div>
-    <div id="alamat"></div>
+    <!-- id hasil -->
+    <div id="hasil"></div>
+
     <script>
-        var nama = "Sanata Dharma";
-        var alamat = "Yogyakarta";
-        document.getElementById("nama").innerHTML = nama;
-        document.getElementById("alamat").innerHTML = alamat;
+        function tampilkan_nama() {
+            return "Universitas Sanata Dharma";
+        }
+
+        document.getElementById("hasil").innerHTML = tampilkan_nama();
     </script>
 </body>
 </html>
