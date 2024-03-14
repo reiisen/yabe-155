@@ -1,0 +1,14 @@
+
+
+.container {
+    width: 50%;
+    height: 100vh;
+}
+
+.container .result {
+
+}
+
+.container .input {
+    display: grid;
+}
