@@ -6,30 +6,38 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="result-box">
-            <span id="result">2</span>
+            <div class="result-box-inner">
+                <span id="result"></span>
+            </div>
         </div>
         <div class="input-box">
-            <a href="" id="" class="button-box div1">7</a>
-            <a href="" id="" class="button-box div2">8</a>
-            <a href="" id="" class="button-box div3">9</a>
-            <a href="" id="" class="button-box div4">4</a>
-            <a href="" id="" class="button-box div5">5</a>
-            <a href="" id="" class="button-box div6">6</a>
-            <a href="" id="" class="button-box div7">1</a>
-            <a href="" id="" class="button-box div8">2</a>
-            <a href="" id="" class="button-box div9">3</a>
-            <a href="" id="" class="button-box div10">0</a>
-            <a href="" id="" class="button-box div11">.</a>
-            <a href="" id="" class="button-box div12">+</a>
-            <a href="" id="" class="button-box div13">-</a>
-            <a href="" id="" class="button-box div14">*</a>
-            <a href="" id="" class="button-box div15">/</a>
-            <a href="" id="" class="button-box div16">C</a>
-            <a href="" id="" class="button-box div17">=</a>
+            <a href="#" id="" class="button-box div1" onclick="append(7)">7</a>
+            <a href="#" id="" class="button-box div2" onclick="append(8)">8</a>
+            <a href="#" id="" class="button-box div3" onclick="append(9)">9</a>
+            <a href="#" id="" class="button-box div4" onclick="append(4)">4</a>
+            <a href="#" id="" class="button-box div5" onclick="append(5)">5</a>
+            <a href="#" id="" class="button-box div6" onclick="append(6)">6</a>
+            <a href="#" id="" class="button-box div7" onclick="append(1)">1</a>
+            <a href="#" id="" class="button-box div8" onclick="append(2)">2</a>
+            <a href="#" id="" class="button-box div9" onclick="append(3)">3</a>
+            <a href="#" id="" class="button-box div10" onclick="append(0)">0</a>
+            <a href="#" id="" class="button-box div11" onclick="append('.')">.</a>
+            <a href="#" id="" class="button-box div12" onclick="append(1)">+</a>
+            <a href="#" id="" class="button-box div13" onclick="append(1)">-</a>
+            <a href="#" id="" class="button-box div14" onclick="append(1)">*</a>
+            <a href="#" id="" class="button-box div15" onclick="append(1)">/</a>
+            <a href="#" id="" class="button-box div16" onclick="append(1)">=</a>
+            <a href="#" id="" class="button-box div17" onclick="clear()">C</a>
         </div>
     </div>
 </body>
