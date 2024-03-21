@@ -20,7 +20,7 @@ function handleButtonClick(event) {
         case '=':
             try {
                 const result = evaluateExpression(currentExpression);
-                currentExpression = parseFloat(result).toFixed(3);
+                currentExpression = result.toString();
             } catch (error) {
                 currentExpression = 'Error';
             }
