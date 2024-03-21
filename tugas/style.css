@@ -15,16 +15,21 @@ body {
     background-color: rgb(30, 30, 30);
     display: flex;
     flex-direction: column;
-
+    
     font-family: 'Open Sans';
     font-size: 14pt;
     font-weight: 500;
     color: white;
 
     position: relative;
-
-    z-index: 99;
     overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    filter: brightness(0.5);
+    width: 100vw;
+    height: 100vh;
 }
 
 .container {
@@ -37,6 +42,8 @@ body {
     margin-top: 2.5vh;
     border: solid rgba(255,255,255,0.2);
     border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
 }
 
 .container .result-box {
@@ -58,7 +65,7 @@ body {
     height: 100%;
     overflow: hidden;
     padding: 0rem 1rem;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .container .input-box {
@@ -128,33 +135,46 @@ body {
 }
 
 .div10 {
-    grid-area: 4 / 1 / 5 / 3;
+    grid-area: 4 / 1 / 5 / 2;
 }
 
 .div11 {
-    grid-area: 4 / 3 / 5 / 4;
+    grid-area: 4 / 2 / 5 / 3;
 }
 
 .div12 {
-    grid-area: 1 / 4 / 2 / 5;
+    grid-area: 4 / 3 / 5 / 4;
 }
 
 .div13 {
-    grid-area: 2 / 4 / 3 / 5;
+    grid-area: 5 / 1 / 6 / 2;
 }
 
 .div14 {
-    grid-area: 3 / 4 / 4 / 5;
+    grid-area: 5 / 2 / 6 / 3;
 }
 
 .div15 {
-    grid-area: 4 / 4 / 5 / 5;
+    grid-area: 5 / 3 / 6 / 4;
 }
 
 .div16 {
-    grid-area: 5 / 1 / 6 / 4;
+    grid-area: 1 / 4 / 2 / 5;
 }
 
 .div17 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.div18 {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.div19 {
+    grid-area: 4 / 4 / 5 / 5;
+}
+
+.div20 {
     grid-area: 5 / 4 / 6 / 5;
 }
+
