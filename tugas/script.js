@@ -9,7 +9,6 @@ buttons.forEach(button => {
 
 function handleButtonClick(event) {
     const value = event.target.textContent;
-
     switch (value) {
         case 'C':
             currentExpression = '';
